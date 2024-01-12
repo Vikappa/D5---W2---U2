@@ -13370,4 +13370,7 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+body {
+  overflow-x: hidden;
 }/*# sourceMappingURL=bootstrap.css.map */

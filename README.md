@@ -6,7 +6,7 @@
 
 ## Descrizione
 
-Clone di Netflix fatto come esercizio settimanale durante il corso fullstack di Epicode
+Clone di Netflix fatto come esercizio settimanale durante il corso fullstack di Epicode <img src="./assets/icons/epicode-logo.png" width="18" height="18" alt="Epicode"/>
 
 ## Strumenti Utilizzati
 
@@ -14,4 +14,4 @@ Clone di Netflix fatto come esercizio settimanale durante il corso fullstack di 
 
 - <img src="./assets/icons/Bootstrap_logo.svg.png" width="14" height="14" alt="Bootstrap"/> **BOOTSTRAP** - Tutto il layout è completamente responsive grazie alle classi bootstrap
 
-- <img src="./assets/icons/sass.svg" width="18" height="18" alt="Bootstrap"/> **Sass** - Il pre-processore Syntatically Awesome Style Sheet è stato usato per modificare le classi Boostrap
+- <img src="./assets/icons/sass.svg" width="18" height="18" alt="Sass"/> **Sass** - Il pre-processore Syntatically Awesome Style Sheet è stato usato per modificare le classi Boostrap
