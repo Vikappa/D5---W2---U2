@@ -9,22 +9,12 @@
 
 @import 'scss/functions'; // l'import di functions è necessario per far funzionare "variables"
 @import 'scss/variables'; // qui sono definite le mappe colore originali
-
-
-
-// il nostro scopo qual è? andare a sovrascrivere la mappa "$theme-colors" dentro "_variables"
+@import 'scss/mixins';
 
 
 // vado a fare un MERGE la mia mappa colori custom con la mappa colori "$theme-colors" di bootstrap
 
-// il merge mette in salvo nella mappa originale i colori che NON sono andato a ri-definire (es. danger, dark etc.)
+$theme-colors: map-merge($theme-colors, $new-theme-colors);
 
 
-
-// merge with existing $theme-colors map
-
-// set changes
-@import "bootstrap";
-
-
-@import 'scss/bootstrap.scss';
+@import 'scss/bootstrap';
