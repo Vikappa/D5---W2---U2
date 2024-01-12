@@ -19,13 +19,13 @@
 
     <meta name="description"
         content="Clone di Netflix fatto come esercizio settimanale durante il corso fullstack di Epicode" />
-    <link rel="stylesheet" href="./assets/scss/bootstrap.css">
+    <link rel="stylesheet" href="./custom-bootstrap.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="./assets/icons/Netflix_favicon.svg" type="image/svg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
-<body class="overflow-x-hidden">
+<body class="overflow-x-hidden bg-primary text-white ">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="./index.html">
@@ -84,20 +84,21 @@
                 </select>
             </div>
 
-            <div class="m-1">
+            <div class="m-1 border p-0">
                 <div class="btn-group d-none d-lg-block" role="group" aria-label="Basic radio toggle button group">
                     <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                    <label class="btn btn-outline-primary" for="btnradio1"><i class="bi bi-list"></i></label>
+                    <label class="btn btn-outline-secondary p-2 m-0" for="btnradio1"><i class="bi bi-list"></i></label>
 
                     <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio2"><i class="bi bi-grid-fill"></i></label>
+                    <label class="btn btn-outline-secondary p-2 m-0" for="btnradio2"><i
+                            class="bi bi-grid-fill"></i></label>
                 </div>
             </div>
         </aside>
 
         <div class="my-5">
             <h3 class="p-3">Trending now</h3>
-            <div class="container col-12 mx-0 overflow-x-auto w-100">
+            <div class="container position-relative col-12 mx-0 overflow-x-auto w-100">
                 <div class="row flex-nowrap">
 
                     <img class="m-0 p-0 col-5 col-lg-3" src="./assets/media/media0.webp">
@@ -117,7 +118,7 @@
         </div>
         <div class="my-5">
             <h3 class="p-3">Watch again</h3>
-            <div class="container col-12 mx-0 overflow-x-auto w-100">
+            <div class="container position-relative col-12 mx-0 overflow-x-auto w-100">
                 <div class="row flex-nowrap">
 
                     <img class="m-0 p-0 col-5 col-lg-3" src="./assets/media/media9.jpg">
@@ -138,7 +139,7 @@
         </div>
         <div class="my-5">
             <h3 class="p-3">Recently added</h3>
-            <div class="container col-12 mx-0 overflow-x-auto w-100">
+            <div class="container position-relative col-12 mx-0 overflow-x-auto w-100">
                 <div class="row flex-nowrap">
 
                     <img class="m-0 p-0 col-5 col-lg-3" src="./assets/media/media18.jpg">
@@ -174,24 +175,24 @@
                 <div class="icon"><i class="bi bi-youtube"></i></div>
             </div>
             <div class="row">
-                <p class="col-3">Audio and Subtitles</p>
-                <p class="col-3">Audio Description </p>
-                <p class="col-3">Help center</p>
-                <p class="col-3">Gift cards</p>
-                <p class="col-3">Media center</p>
-                <p class="col-3">Investor Relations</p>
-                <p class="col-3">Jobs</p>
-                <p class="col-3">Terms of use</p>
-                <p class="col-3">Privacy</p>
-                <p class="col-3">Legal Notices</p>
-                <p class="col-3">Cookie preferences</p>
-                <p class="col-3">Corporate Informations</p>
-                <p class="col-3">Contact us</p>
+                <p class="col-lg-3 col-4">Audio and Subtitles</p>
+                <p class="col-lg-3 col-4">Audio Description </p>
+                <p class="col-lg-3 col-4">Help center</p>
+                <p class="col-lg-3 col-4">Gift cards</p>
+                <p class="col-lg-3 col-4">Media center</p>
+                <p class="col-lg-3 col-4">Investor Relations</p>
+                <p class="col-lg-3 col-4">Jobs</p>
+                <p class="col-lg-3 col-4">Terms of use</p>
+                <p class="col-lg-3 col-4">Privacy</p>
+                <p class="col-lg-3 col-4">Legal Notices</p>
+                <p class="col-lg-3 col-4">Cookie preferences</p>
+                <p class="col-lg-3 col-4">Corporate Informations</p>
+                <p class="col-lg-3 col-4">Contact us</p>
             </div>
         </div>
 
         <div class="d-flex flex-column">
-            <button type="button" class="btn btn-outline-secondary col-2 m-4">Service Code</button>
+            <button type="button" class="btn btn-outline-secondary col-6 col-lg-2 m-4">Service Code</button>
             <p>® 1997-2019 Netflix, inc</p>
 
         </div>
