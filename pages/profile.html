@@ -4,11 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/scss/bootstrap.css">
     <title>Profile</title>
 </head>
 
 <body>
 
+    <nav class="navbar bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/netflix_logo.png" height="30" width="70" alt="Logo">
+            </a>
+        </div>
+    </nav>
+
+    <div class="container col-12 col-lg-5 mx-auto my-5">
+        <div class="row flex-column">
+            <h1 class="m-0">Edit Profile</h1>
+        </div>
+        <hr class="mt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <img src="../assets/avatar.png" alt="Vincenzo, nu bell waglion" class="rounded-4 img-fluid">
+                </div>
+                <div class="col-8">
+                    <p>Vincenzo Costantini</p>
+                    <div class="d-flex flex-column col-lg-4">
+                        <p class="p-0 m-1">Language:</p>
+                        <select class="form-select" aria-label="Default select example">
+                            <option value="1">English</option>
+                            <option value="2">Italiano</option>
+                            <option value="3">Klingon</option>
+                            <option value="4">Espanol</option>
+                        </select>
+
+                    </div>
+                    <hr>
+                    <p class="p-0 m-1">Maturity Settings:</p>
+                    <p>ALL MATURITY SETTINGS</p>
+                    <p>Shows titles of all maturity settings for this profile.</p>
+                    <button type="button" class="btn btn-outline-secondary col-lg-2 m-1">EDIT</button>
+                    <hr>
+                    <p>Autoplay controls</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Autoplay next episode in a series on all devices.
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Autoplay previevs while browsing on all devices.
+                        </label>
+                    </div>
+                    <hr>
+                    <div class="container">
+                        <div class="row gap-3 text-nowrap">
+                            <button type="button" class="btn btn-outline-secondary col-5 col-lg-3">Save</button>
+                            <button type="button" class="btn btn-outline-secondary col-5  col-lg-3">Cancel</button>
+                            <button type="button" class="btn btn-outline-secondary col-11 col-lg-5">Delete
+                                Profile</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
