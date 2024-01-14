@@ -68,6 +68,16 @@ const cambiaIconaVolume = function () {
     }
 }
 
+const cambiaVolume = function () {
+    if (previewFilm.muted) {
+        previewFilm.muted = false;
+        previewFilm.volume = 0.5;
+    } else {
+        previewFilm.muted = true;
+    }
+}
+
 const tastoVolumePremuto = function () {
     cambiaIconaVolume()
+    cambiaVolume()
 }
