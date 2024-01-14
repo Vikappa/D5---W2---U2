@@ -72,7 +72,7 @@
     </nav>
 
     <section style="height: 45vw" class="position-relative text-bianco">
-        <video autoplay muted loop class="w-100 h-100">
+        <video autoplay muted loop class="w-100 h-100" id="previewFilm">
             <source src="./assets/media/Rick and Morty Season 1 extended promo.mp4" />
         </video>
         <div id="banner" class="text-white position-absolute top-0 start-0 w-100 h-100">
@@ -90,8 +90,8 @@
                     <button type="button" class="btn btn-light">
                         <i class="bi bi-play-fill"></i><span>Guarda</span>
                     </button>
-                    <button type="button" class="btn btn-light">
-                        <i class="bi bi-volume-mute-fill"></i>
+                    <button type="button" class="btn btn-light" id="volumeButton" onclick="tastoVolumePremuto()">
+                        <i class="bi bi-volume-mute-fill" id="volumeStatus"></i>
                     </button>
                 </div>
             </div>
