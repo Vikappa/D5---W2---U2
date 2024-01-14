@@ -1,25 +1,42 @@
-const container = document.getElementById('scroll-container');
+// Seleziona il div che vuoi rendere scorrevole
+const scrollContainers = document.querySelectorAll('.container');
 
-container.addEventListener('mousedown', (e) => {
-    let isDown = true;
-    let startX = e.pageX - container.offsetLeft;
-    let scrollLeft = container.scrollLeft;
+// Aggiungi event listener per il mouse
+let isDown = false;
+let startX;
+let scrollLeft;
 
-    container.style.cursor = 'grabbing';
-
-    document.addEventListener('mouseup', () => {
-        isDown = false;
-        container.style.cursor = 'grab';
+scrollContainers.forEach(scrollContainer => {
+    scrollContainer.addEventListener('mousedown', (e) => {
+        isDown = true;
+        scrollContainer.classList.add('active');
+        startX = e.pageX - scrollContainer.offsetLeft;
+        scrollLeft = scrollContainer.scrollLeft;
     });
-
-    document.addEventListener('mousemove', (e) => {
+    scrollContainer.addEventListener('mouseleave', () => {
+        isDown = false;
+        scrollContainer.classList.remove('active');
+    });
+    scrollContainer.addEventListener('mouseup', () => {
+        isDown = false;
+        scrollContainer.classList.remove('active');
+    });
+    scrollContainer.addEventListener('mousemove', (e) => {
         if (!isDown) return;
         e.preventDefault();
-        const x = e.pageX - container.offsetLeft;
-        const walk = x - startX;
-        container.scrollLeft = scrollLeft - walk;
+        const x = e.pageX - scrollContainer.offsetLeft;
+        const walk = (x - startX) * 3; // Velocità dello scroll
+        scrollContainer.scrollLeft = scrollLeft - walk;
     });
 });
+
+
+
+
+
+
+
+
 
 // Per il supporto touchscreen
 container.addEventListener('touchstart', (e) => {
