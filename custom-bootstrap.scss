@@ -1,20 +1,8 @@
-// qui dentro è dove applicherò le mie personalizzazioni
-
-// da dove parto? per prima cosa è necessario IMPORTARE qui dentro i sorgenti di bootstrap
-// una volta fatto, potrò cambiare i colori, le spaziature, i breakpoints etc.
-// infine, il passo finale sarà RICOMPILARE questi sorgenti "manipolati" in modo da ottenere un
-// bootstrap.css come lo voglio io!
-
-// proviamo a cambiare i colori di default:
-
-@import 'scss/functions'; // l'import di functions è necessario per far funzionare "variables"
-@import 'scss/variables'; // qui sono definite le mappe colore originali
+@import 'scss/functions';
+@import 'scss/variables';
 @import 'scss/mixins';
 
 
-// vado a fare un MERGE la mia mappa colori custom con la mappa colori "$theme-colors" di bootstrap
-
-$theme-colors: map-merge($theme-colors, $new-theme-colors);
 
 
 @import 'scss/bootstrap';
