@@ -1,12 +1,11 @@
-// Seleziona il div che vuoi rendere scorrevole
 const scrollContainers = document.querySelectorAll('.container');
 
-// Aggiungi event listener per il mouse
 let isDown = false;
 let startX;
 let scrollLeft;
 
 scrollContainers.forEach(scrollContainer => {
+    // Eventi del mouse
     scrollContainer.addEventListener('mousedown', (e) => {
         isDown = true;
         scrollContainer.classList.add('active');
@@ -25,43 +24,30 @@ scrollContainers.forEach(scrollContainer => {
         if (!isDown) return;
         e.preventDefault();
         const x = e.pageX - scrollContainer.offsetLeft;
-        const walk = (x - startX) * 3; // Velocità dello scroll
+        const walk = (x - startX) * 3;
         scrollContainer.scrollLeft = scrollLeft - walk;
     });
-});
 
-
-
-
-
-
-
-
-
-// Per il supporto touchscreen
-container.addEventListener('touchstart', (e) => {
-    const touch = e.touches[0];
-    let startX = touch.clientX - container.offsetLeft;
-    let scrollLeft = container.scrollLeft;
-
-    container.addEventListener('touchmove', (e) => {
-        const touch = e.touches[0];
-        const x = touch.clientX - container.offsetLeft;
-        const walk = x - startX;
-        container.scrollLeft = scrollLeft - walk;
+    // Eventi touch
+    scrollContainer.addEventListener('touchstart', (e) => {
+        isDown = true;
+        scrollContainer.classList.add('active');
+        startX = e.touches[0].pageX - scrollContainer.offsetLeft;
+        scrollLeft = scrollContainer.scrollLeft;
     });
-});
-
-const images = document.querySelectorAll('.img-fluid');
-
-const leftArrow = document.getElementById('left-arrow');
-const rightArrow = document.getElementById('right-arrow');
-const scrollStep = 200; // Larghezza del passo di scorrimento
-
-leftArrow.addEventListener('click', () => {
-    container.scrollBy({ left: -scrollStep, behavior: 'smooth' });
-});
-
-rightArrow.addEventListener('click', () => {
-    container.scrollBy({ left: scrollStep, behavior: 'smooth' });
+    scrollContainer.addEventListener('touchend', () => {
+        isDown = false;
+        scrollContainer.classList.remove('active');
+    });
+    scrollContainer.addEventListener('touchcancel', () => {
+        isDown = false;
+        scrollContainer.classList.remove('active');
+    });
+    scrollContainer.addEventListener('touchmove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.touches[0].pageX - scrollContainer.offsetLeft;
+        const walk = (x - startX) * 3;
+        scrollContainer.scrollLeft = scrollLeft - walk;
+    });
 });
